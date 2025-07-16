@@ -1,19 +1,6 @@
-# Task-3-Project-Event-Management-System-using-MySQL
+-- Task 3 Project: Event Management System using Mysql. Objective: To develop the application that allows users to create and manage events, trackattendees, and handle event registrations efficiently. The project will include the followingtasks:
 
-Task 3
-Project: Event Management System using PostgreSQL.
-Objective: To develop the application that allows users to create and manage events, track
-attendees, and handle event registrations efficiently. The project will include the following
-tasks:
-
-1.Database Creation
-Create a database named "EventsManagement."
-Create tables for Events, Attendees, and Registrations.
-Events- Event_Id, Event_Name, Event_Date, Event_Location, Event_Description
-Attendees- Attendee_Id, Attendee_Name, Attendee_Phone, Attendee_Email, Attendee_City
-Registrations-Registration_id, Event_Id, Attendee_Id,Registration_Date,Registration_Amount.
-The FOREIGN KEY constraint in the Registrations table references the Event_Id column in the
-Events table and the Attendee_Id column in the Attendees table.
+-- 1.Database Creation Create a database named "EventsManagement." Create tables for Events, Attendees, and Registrations.Events- Event_Id, Event_Name, Event_Date, Event_Location, Event_DescriptionAttendees- Attendee_Id, Attendee_Name, Attendee_Phone, Attendee_Email, Attendee_City Registrations-Registration_id, Event_Id, Attendee_Id,Registration_Date,Registration_Amount. The FOREIGN KEY constraint in the Registrations table references the Event_Id column in the Events table and the Attendee_Id column in the Attendees table.
 
 -- Create the database
 CREATE DATABASE EventsManagement;
@@ -52,7 +39,7 @@ CREATE TABLE Registrations (
 
 
 
-2.Data Creation
+-- 2.Data Creation
 Insert some sample data for Events, Attendees, and Registrations tables with respective fields.
 
 -- Insert data into Events table
@@ -88,14 +75,14 @@ INSERT INTO Registrations (Registration_Id, Event_Id, Attendee_Id, Registration_
 
 
 
-3. Manage Event Details
-a) Inserting a new event.
+--3. Manage Event Details
+-- a) Inserting a new event.
 
 INSERT INTO EVENTS 
 VALUES (6, 'Yoga session', '2025-09-25' , ' Central Park ' , ' Beginner Yoga session');
 
 
-b) Updating an event's information.
+-- b) Updating an event's information.
 
 UPDATE EVENTS
 SET EVENT_LOCATION = 'City Dome',
@@ -103,7 +90,7 @@ SET EVENT_LOCATION = 'City Dome',
 WHERE EVENT_ID = '2'
 
 
-c) Deleting an event.
+-- c) Deleting an event.
 
 -- First delete registrations for Event_Id = 1
 
@@ -118,19 +105,18 @@ DELETE FROM EVENTS
 WHERE EVENT_ID = 1;
 
 
-4) Manage Track Attendees & Handle Events
-a)Inserting a new attendee.
+-- 4) Manage Track Attendees & Handle Events
+-- a)Inserting a new attendee.
 
 INSERT INTO ATTENDEES
 VALUES (108,'FORD CLIFF','555-0133','ford.c@email.com','LOS VEGAS') ;
 
-b)Registering an attendee for an event.
+-- b)Registering an attendee for an event.
 
 INSERT INTO Registrations 
 VALUES (1011, 6, 108, '2025-06-15', 25.99) ; 
 
-5.Develop queries to retrieve event information, generate attendee lists, and calculate event
-attendance statistics.
+-- 5.Develop queries to retrieve event information, generate attendee lists, and calculate event attendance statistics.
 
 
 SELECT 
